@@ -1,0 +1,207 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+* {
+    font-family: 'Poppins', sans-serif;
+    margin: 0; padding: 0;
+    box-sizing: border-box;
+    outline: none; border: none;
+    text-decoration: none;
+}
+body, 
+html {
+    overflow-x: hidden;
+}
+
+.showcase {
+    position: absolute;
+    right: 0;
+    width: 100%;
+    min-height: 100vh;
+    padding: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #000;
+    color: #fff;
+    z-index: 2;
+
+}
+.showcase header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 40px 100px;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.showcase header .logo:hover {
+    cursor: pointer;
+}
+.showcase header .others-logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+} 
+
+.showcase video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.8;
+}
+.content, 
+.social {
+    max-width: 700px;
+    position: relative;
+    z-index: 10;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #27262365;
+    mix-blend-mode: overlay;
+}
+
+.content .title {
+    font-size: 3em;
+    font-weight: 800;
+    line-height: 1em;
+    transition: 0.5s;
+}
+.content .title:hover {
+    -webkit-text-stroke: 2px #FBC902;
+    color: transparent;
+    cursor: pointer;
+}
+.content p {
+    font-size: 1.1em;
+    margin: 20px 0;
+    font-weight: 400;
+}
+.content p span {
+    font-weight: 700;
+    color: #FBC902;
+}
+.content p .end {
+    font-weight: 700;
+    font-size: 1.3rem;
+    color: #FBC902;
+}
+.content .count-down {
+    display: flex;
+    gap: 15px;
+    padding: 10px 0;
+ }
+ .content .count-down .box {
+     padding: 5px;
+     background:#00000038;
+     border: 1px solid #FBC902;
+     text-align: center;
+     flex: 1 1 20px;
+ }
+ .content .count-down .box h3 {
+     font-size: 50px;
+     color: #FBC902;
+     font-weight: 700;
+ }
+ .content .count-down .box span {
+     color: #FB421E;
+     font-size: 20px;
+     font-weight: 500;
+ }
+ 
+ .content .btn {
+     display: inline-block;
+     padding: 10px 30px;
+     margin: 10px 0;
+     font-size: 1em;
+     background: #FB421E;
+     color: #fff;
+     transition: 0.2s ease-out;
+ }
+ .content .btn:hover {
+      letter-spacing: 2px;
+ }
+
+ .social {
+    position: absolute;
+    bottom: 5px;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+ }
+.social li {
+    list-style: none;
+}
+.social li  a {
+    display: inline-block;
+    filter: invert(1);
+    margin-right: 20px;
+    transform: scale(0.5);
+    transform: 0.2s;
+}
+.social li a:hover {
+    transform: scale(0.5) translateY(-15px);
+}
+
+@media (max-width: 991px) {
+    .showcase,
+    .showcase header {
+        padding: 30px;
+    }
+    .content h2  {
+        font-size: 3em;
+    }
+
+}
+
+@media (max-width:661px) {
+    .showcase header {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+    }
+    .showcase header .logo {
+        widows: 100%;
+    }
+    .content,
+    .social {
+        text-align: center;
+        max-width: 900px;
+    }
+    .social {
+        display: none;
+    }
+    .content .title {
+        font-size: 35px;
+        padding-top: 100px;
+    }
+    .content p {
+        text-align: justify;
+        text-align: center;
+    }
+    .content .count-down {
+        gap: 5px;
+        flex-wrap: wrap;
+    }
+    .content .count-down h3 {
+        font-size: 30px;
+    }
+    .content .count-down p {
+        font-size: 14px;
+    }
+    .content .count-down span {
+        font-size: 15px;
+    }
+} 
